@@ -1,12 +1,8 @@
 class BooksController < ApplicationController
 
   def index
-    # if current_user.role == user
-      @books = Book.all
-      render json: @books
-    # else
-    #   @users = User.where(role: 'user')
-    # end
+    @books = Book.all
+    render json: @books
   end
 
   def show
@@ -20,9 +16,5 @@ class BooksController < ApplicationController
     else 
       render error: {error: 'Unable to create book. '}, status: 400
     end
-  end
-
-  def update
-    @book = Book.find(params[:id])
   end
 end
