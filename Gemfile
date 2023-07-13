@@ -70,8 +70,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "debug"
-gem "byebug"
 end
 
+gem "byebug"
+
 gem "devise", "~> 4.9"
+# gem 'devise-jwt'
+# gem 'rack-cors'
